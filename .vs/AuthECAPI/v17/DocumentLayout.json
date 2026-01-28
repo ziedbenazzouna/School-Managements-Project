@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Projects\\AuthECAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A5A10B67-1F10-4905-A774-717E8D2B6E06}|AuthECAPI\\AuthECAPI.csproj|d:\\projects\\authecapi\\authecapi\\userdetails.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A5A10B67-1F10-4905-A774-717E8D2B6E06}|AuthECAPI\\AuthECAPI.csproj|solutionrelative:authecapi\\userdetails.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5A10B67-1F10-4905-A774-717E8D2B6E06}|AuthECAPI\\AuthECAPI.csproj|d:\\projects\\authecapi\\authecapi\\authecapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{A5A10B67-1F10-4905-A774-717E8D2B6E06}|AuthECAPI\\AuthECAPI.csproj|solutionrelative:authecapi\\authecapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A5A10B67-1F10-4905-A774-717E8D2B6E06}|AuthECAPI\\AuthECAPI.csproj|d:\\projects\\authecapi\\authecapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5A10B67-1F10-4905-A774-717E8D2B6E06}|AuthECAPI\\AuthECAPI.csproj|solutionrelative:authecapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A5A10B67-1F10-4905-A774-717E8D2B6E06}|AuthECAPI\\AuthECAPI.csproj|d:\\projects\\authecapi\\authecapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A5A10B67-1F10-4905-A774-717E8D2B6E06}|AuthECAPI\\AuthECAPI.csproj|solutionrelative:authecapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5A10B67-1F10-4905-A774-717E8D2B6E06}|AuthECAPI\\AuthECAPI.csproj|d:\\projects\\authecapi\\authecapi\\userdetails.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A5A10B67-1F10-4905-A774-717E8D2B6E06}|AuthECAPI\\AuthECAPI.csproj|solutionrelative:authecapi\\userdetails.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A5A10B67-1F10-4905-A774-717E8D2B6E06}|AuthECAPI\\AuthECAPI.csproj|d:\\projects\\authecapi\\authecapi\\extensions\\appconfigextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,11 +70,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "AuthECAPI",
+              "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\AuthECAPI.csproj",
+              "RelativeDocumentMoniker": "AuthECAPI\\AuthECAPI.csproj",
+              "ToolTip": "D:\\Projects\\AuthECAPI\\AuthECAPI\\AuthECAPI.csproj",
+              "RelativeToolTip": "AuthECAPI\\AuthECAPI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-28T13:35:55.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "AuthECAPI\\Properties\\launchSettings.json",
@@ -78,12 +94,11 @@
               "RelativeToolTip": "AuthECAPI\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-28T12:54:44.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T12:54:44.764Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\appsettings.json",
               "RelativeDocumentMoniker": "AuthECAPI\\appsettings.json",
@@ -91,25 +106,24 @@
               "RelativeToolTip": "AuthECAPI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-20T19:04:17.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T19:04:17.006Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\Program.cs",
               "RelativeDocumentMoniker": "AuthECAPI\\Program.cs",
               "ToolTip": "D:\\Projects\\AuthECAPI\\AuthECAPI\\Program.cs",
               "RelativeToolTip": "AuthECAPI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-19T12:32:13.39Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "EFCoreExtensions.cs",
               "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\Extensions\\EFCoreExtensions.cs",
               "RelativeDocumentMoniker": "AuthECAPI\\Extensions\\EFCoreExtensions.cs",
@@ -121,20 +135,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "userdetails.json",
               "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\userdetails.json",
               "RelativeDocumentMoniker": "AuthECAPI\\userdetails.json",
               "ToolTip": "D:\\Projects\\AuthECAPI\\AuthECAPI\\userdetails.json",
               "RelativeToolTip": "AuthECAPI\\userdetails.json",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAIAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-01-20T18:06:26.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AppConfigExtensions.cs",
               "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\Extensions\\AppConfigExtensions.cs",
               "RelativeDocumentMoniker": "AuthECAPI\\Extensions\\AppConfigExtensions.cs",
@@ -146,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "StudentDetail.cs",
               "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\Models\\StudentDetail.cs",
               "RelativeDocumentMoniker": "AuthECAPI\\Models\\StudentDetail.cs",
@@ -158,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "StudentDetailEndpoints.cs",
               "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\Controllers\\StudentDetailEndpoints.cs",
               "RelativeDocumentMoniker": "AuthECAPI\\Controllers\\StudentDetailEndpoints.cs",
@@ -170,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IdentityUserEndpoints.cs",
               "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\Controllers\\IdentityUserEndpoints.cs",
               "RelativeDocumentMoniker": "AuthECAPI\\Controllers\\IdentityUserEndpoints.cs",
@@ -182,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\Models\\AppDbContext.cs",
               "RelativeDocumentMoniker": "AuthECAPI\\Models\\AppDbContext.cs",
@@ -194,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "20260124161130_add new table.cs",
               "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\Migrations\\20260124161130_add new table.cs",
               "RelativeDocumentMoniker": "AuthECAPI\\Migrations\\20260124161130_add new table.cs",
@@ -206,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AppUser.cs",
               "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\Models\\AppUser.cs",
               "RelativeDocumentMoniker": "AuthECAPI\\Models\\AppUser.cs",
@@ -218,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "SwaggerExtensions.cs",
               "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\Extensions\\SwaggerExtensions.cs",
               "RelativeDocumentMoniker": "AuthECAPI\\Extensions\\SwaggerExtensions.cs",
@@ -230,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "AppSettings.cs",
               "DocumentMoniker": "D:\\Projects\\AuthECAPI\\AuthECAPI\\Models\\AppSettings.cs",
               "RelativeDocumentMoniker": "AuthECAPI\\Models\\AppSettings.cs",
