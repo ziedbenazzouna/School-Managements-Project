@@ -28,7 +28,8 @@ export class StudentDetailsComponent implements OnInit {
       this.service.deleteStudentDetail(id)
         .subscribe({
           next: res => {
-            this.service.list = res as StudentDetail[]         
+            this.service.list = res as StudentDetail[] 
+            this.service.triggerFormReset()        
             this.toastr.error('Deleted successfully', 'Payment Detail Register')
           },
           error: err => { console.log(err) }

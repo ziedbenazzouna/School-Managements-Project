@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment.development';
 import { StudentDetail } from '../student-detail.model';
 import { NgForm } from '@angular/forms';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,7 @@ export class StudentDetailService {
   list: StudentDetail[] = [];
   formData: StudentDetail = new StudentDetail()
   formSubmitted: boolean = false;
+   resetFormSubject = new Subject<void>()
 
   constructor( private http: HttpClient) { }
 
@@ -37,6 +39,10 @@ export class StudentDetailService {
   deleteStudentDetail(id: number) {
     return this.http.delete(environment.apiBaseUrl+'/studentDetail' + '/' + id)
   } 
+
+    triggerFormReset() {
+    this.resetFormSubject.next()
+  }
 
 
   resetForm(form: NgForm) {

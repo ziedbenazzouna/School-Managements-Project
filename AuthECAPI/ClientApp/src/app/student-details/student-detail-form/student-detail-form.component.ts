@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { StudentDetailService } from '../../shared/services/student-detail.service';
 import { FormsModule, NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
@@ -11,8 +11,15 @@ import { StudentDetail } from '../../shared/student-detail.model';
   templateUrl: './student-detail-form.component.html',
   styles: ``
 })
-export class StudentDetailFormComponent {
+export class StudentDetailFormComponent implements OnInit {
+  @ViewChild('form') form!: NgForm
   constructor( public service : StudentDetailService,private toastr: ToastrService){}
+
+  ngOnInit(): void {
+    this.service.resetFormSubject.subscribe(() => {
+      this.service.resetForm(this.form)
+    })
+  }
 
    onSubmit(form: NgForm) {
     this.service.formSubmitted = true
