@@ -1,0 +1,16 @@
+# Visual Studio files (Fixes the "Permission Denied" error)
+.vs/
+.vscode/
+*.user
+*.suo
+
+# .NET
+bin/
+obj/
+appsettings.Development.json
+
+# Angular
+ClientApp/node_modules/
+ClientApp/.angular/
+wwwroot/*
+!wwwroot/.gitkeep
