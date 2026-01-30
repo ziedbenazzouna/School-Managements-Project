@@ -20,5 +20,8 @@ namespace AuthECAPI.Models
 
         [Column(TypeName = "nvarchar(2)")]
         public string Age { get; set; } = "";
+
+        [Column(TypeName = "nvarchar(500)")]
+        public string? ImgPath { get; set; }
     }
 }

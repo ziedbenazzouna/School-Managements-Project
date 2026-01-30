@@ -1,6 +1,7 @@
 using AuthECAPI.Controllers;
 using AuthECAPI.Extensions;
 using AuthECAPI.Models;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,8 @@ builder.Services
     .InjectDbContext(builder.Configuration)
     .AddAppConfig(builder.Configuration)
     .AddIdentityHandlersAndStores()
-    .ConfigureIdentityOptions()                
+    .ConfigureIdentityOptions()
+    .ConfigureFileOptions()
     .AddIdentityAuth(builder.Configuration)
     ;
 
@@ -23,6 +25,17 @@ var app = builder.Build();
 
 app.UseDefaultFiles(); // Searches for index.html in wwwroot
 app.UseStaticFiles();
+
+var resourcesPath = Path.Combine(builder.Environment.ContentRootPath, "Resources");
+if (!Directory.Exists(resourcesPath)) Directory.CreateDirectory(resourcesPath);
+
+app.UseStaticFiles(
+    new StaticFileOptions
+    {
+        FileProvider = new PhysicalFileProvider(resourcesPath),
+        RequestPath = "/Resources"
+    }
+    );
 
 
 app.ConfigureSwaggerExplorer()
@@ -39,6 +52,7 @@ app
 app.MapGroup("/api")
     .MapIdentityUserEndpoints()
     .MapAccountEndpoints()
+    .MapUploadEndpoints()
     .MapStudentDetailEndpoints()
     .MapAuthorizationDemoEndpoints();
 

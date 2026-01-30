@@ -14,8 +14,21 @@ export class StudentDetailService {
   formData: StudentDetail = new StudentDetail()
   formSubmitted: boolean = false;
    resetFormSubject = new Subject<void>()
+   private readonly apiBase = environment.apiBaseUrl;
 
   constructor( private http: HttpClient) { }
+
+  getImageSourceUrl(imgPath: string | undefined | null): string {
+    
+    if (imgPath && imgPath.length > 0) {
+    const backendUrl = environment.apiBaseUrl.replace('/api', ''); // Remove /api suffix if present
+    return `${backendUrl}/${imgPath.replace(/\\/g, '/')}`;
+  }
+  
+  // Otherwise, load the avatar from the FRONTEND public folder
+
+  return 'default-image.jpg';
+  }
 
   refreshList() {
     this.http.get(environment.apiBaseUrl+'/studentDetail')
@@ -25,6 +38,12 @@ export class StudentDetailService {
         },
         error: err => { console.log(err) }
       })
+  }
+
+  uploadImage(file: File) {
+    const formData = new FormData();
+    formData.append('file', file, file.name); // 'file' must match IFormFile parameter name in .NET
+    return this.http.post<{ dbPath: string }>(environment.apiBaseUrl + '/upload', formData);
   }
 
   postStudentDetail() {
@@ -49,5 +68,6 @@ export class StudentDetailService {
     form.form.reset()
     this.formData = new StudentDetail()
     this.formSubmitted = false
+    this.resetFormSubject.next();
   }
 }

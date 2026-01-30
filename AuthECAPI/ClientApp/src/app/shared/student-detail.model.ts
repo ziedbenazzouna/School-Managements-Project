@@ -4,4 +4,5 @@ export class StudentDetail {
   inscriptionCardNumber: string = ""
   age: string = ""
   expirationCardDate: string = ""
+  imgPath : string = ""
 }
