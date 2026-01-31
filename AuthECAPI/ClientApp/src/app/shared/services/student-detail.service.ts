@@ -63,6 +63,11 @@ export class StudentDetailService {
     this.resetFormSubject.next()
   }
 
+  downloadPdf() {
+  return this.http.get(environment.apiBaseUrl + '/StudentDetail/export', {
+    responseType: 'blob'
+    });
+  }
 
   resetForm(form: NgForm) {
     form.form.reset()

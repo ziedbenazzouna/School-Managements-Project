@@ -36,4 +36,26 @@ export class StudentDetailsComponent implements OnInit {
         })
   }
 
+   public exportToPDF() {
+    this.service.downloadPdf().subscribe({
+    next: (res: Blob) => {
+      // 1. Create a URL for the blob data
+      const blobUrl = window.URL.createObjectURL(res);
+      
+      // 2. Create a temporary anchor element
+      const anchor = document.createElement('a');
+      anchor.href = blobUrl;
+      anchor.download = 'StudentList.pdf'; // Filename for the browser
+      
+      // 3. Trigger the click and clean up
+      anchor.click();
+      window.URL.revokeObjectURL(blobUrl);
+    },
+    error: err => {
+      console.error('PDF Download failed', err);
+      this.toastr.error('Failed to generate PDF');
+    }
+   });
+  }
+  
 }

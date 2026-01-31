@@ -2,8 +2,12 @@ using AuthECAPI.Controllers;
 using AuthECAPI.Extensions;
 using AuthECAPI.Models;
 using Microsoft.Extensions.FileProviders;
+using QuestPDF.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
+
+QuestPDF.Settings.License = LicenseType.Community;
+QuestPDF.Settings.UseEnvironmentFonts = false;
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -23,21 +27,7 @@ builder.Services
 
 var app = builder.Build();
 
-app.UseDefaultFiles(); // Searches for index.html in wwwroot
-app.UseStaticFiles();
-
-var resourcesPath = Path.Combine(builder.Environment.ContentRootPath, "Resources");
-if (!Directory.Exists(resourcesPath)) Directory.CreateDirectory(resourcesPath);
-
-app.UseStaticFiles(
-    new StaticFileOptions
-    {
-        FileProvider = new PhysicalFileProvider(resourcesPath),
-        RequestPath = "/Resources"
-    }
-    );
-
-
+app.ConfigureFile(builder.Configuration);
 app.ConfigureSwaggerExplorer()
     .ConfigureCors(builder.Configuration);
     

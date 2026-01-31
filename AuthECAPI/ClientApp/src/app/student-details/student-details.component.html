@@ -6,11 +6,23 @@
     <app-student-detail-form />
   </div>
   <div class="col-6">
-    <ul class="list-group">
+    <!-- Header with Print Button -->
+     <div class="d-flex justify-content-between align-items-center mb-3">
+      <h5 class="m-0">Student List</h5>
+      <button class="btn btn-primary btn-sm" (click)="exportToPDF()">
+        <i class="fa-solid fa-file-pdf me-2"></i>Export PDF
+      </button>
+    </div> 
+    <!-- <ul class="list-group" #pdfContent> -->
+      <ul class="list-group">
       <li class="list-group-item d-flex justify-content-between align-items-start mb-2 border px-4 py-3 rounded-3"
-        *ngFor="let pd of service.list">
-        <div class="flex-grow-1 mouse-hover" 
-        (click)="populateForm(pd)">
+          *ngFor="let pd of service.list">
+        <img [src]="service.getImageSourceUrl(pd.imgPath)"
+             alt="Student Avatar"
+             class="img-thumbnail me-3"
+             style="width: 60px; height: 60px; object-fit: cover;">
+        <div class="flex-grow-1 mouse-hover"
+             (click)="populateForm(pd)">
           <div class="fw-bold">{{pd.studentFullName}}</div>
           <div>{{pd.age}}</div>
           <div>{{pd.inscriptionCardNumber}}</div>
@@ -18,7 +30,7 @@
         </div>
         <span class="text-secondary">
           <i class="fa-solid fa-trash-can fa-lg mouse-hover" (click)="onDelete(pd.studentDetailId)">
-        </i>
+          </i>
         </span>
       </li>
     </ul>

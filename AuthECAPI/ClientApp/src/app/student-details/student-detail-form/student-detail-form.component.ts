@@ -20,15 +20,21 @@ export class StudentDetailFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.resetFormSubject.subscribe(() => {
+    this.onResetForm();
+    })
+  }
+
+  onResetForm()
+  {    
       this.service.resetForm(this.form)
       this.imgPreview = null; // Clear local preview when form resets
       this.selectedFile = null;
       // 2. Clear the actual file input in the DOM
-    const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
-    if (fileInput) {
-      fileInput.value = '';
-    }
-    })
+      const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
+      if (fileInput) {
+        fileInput.value = '';
+      }
+    
   }
 
   onFileSelected(event: any) {
